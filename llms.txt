@@ -1,0 +1,23 @@
+# publish-quality-gate
+
+> Fixed publish-process gate: before publish, four layers of sensitive-information checks (company / machine / personal / secrets) with zero-hit per layer; after publish, TRACE five-dimension AI self-test (Trust / Reliability / Adaptability / Convention / Effectiveness).
+
+An Agent Skill in the SynomosAI ecosystem. Applies to every external release (Skill, expert package, doc, HTML, PPT, tool).
+
+## Core
+
+- [SKILL.md](https://github.com/SynomosAI/publish-quality-gate/blob/main/SKILL.md): skill main file (four-layer checklist + TRACE dimensions)
+- [scripts/check_release.py](https://github.com/SynomosAI/publish-quality-gate/blob/main/scripts/check_release.py): quick release check script
+- [ATTESTATION.md](https://github.com/SynomosAI/publish-quality-gate/blob/main/ATTESTATION.md): ownership attestation
+- [manifest.json](https://github.com/SynomosAI/publish-quality-gate/blob/main/manifest.json): package fingerprint and per-file sha256
+- [README.md](https://github.com/SynomosAI/publish-quality-gate/blob/main/README.md): Chinese overview
+- [LICENSE.md](https://github.com/SynomosAI/publish-quality-gate/blob/main/LICENSE.md): MIT
+
+## Optional
+
+- [README.en.md](https://github.com/SynomosAI/publish-quality-gate/blob/main/README.en.md): English overview
+- [AGENTS.md](https://github.com/SynomosAI/publish-quality-gate/blob/main/AGENTS.md): guidance for AI agents
+- [llms-full.txt](https://github.com/SynomosAI/publish-quality-gate/blob/main/llms-full.txt): full text
+- [SECURITY.md](https://github.com/SynomosAI/publish-quality-gate/blob/main/SECURITY.md): security policy
+- [security-radar.svg](https://github.com/SynomosAI/publish-quality-gate/blob/main/security-radar.svg): latest self-test radar
+- [CODEOWNERS](https://github.com/SynomosAI/publish-quality-gate/blob/main/CODEOWNERS): content owners

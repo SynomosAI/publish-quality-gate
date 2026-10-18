@@ -1,0 +1,51 @@
+# publish-quality-gate — 完整文本 / Full text
+
+本文件为 llms.txt 标准的「完整版」，供长上下文模型一次性读取本仓库的完整说明。
+
+## 这是什么
+
+`publish-quality-gate` 是一道发布流程的固定门禁：任何对外发布物（Skill、专家包、文档、HTML、PPT、工具）发布前后都必须过它。发布前做四层敏感信息检查（公司/本机/个人/机密），发布后做 TRACE 五维 AI 自测。
+
+## 发布前：四层敏感信息检查
+
+原则：宁可错杀，不可漏放。每层必须零命中，有命中先脱敏再重新打包复查。
+
+- L1 公司敏感：公司名、人名、证号、内部资料（体系文件/合同/财务/未公开标准）。
+- L2 本机信息：本机路径（Users 目录）、电脑用户名、硬编码安装路径、本机硬件型号。
+- L3 个人信息：身份证、手机、邮箱、住址、银行卡等可识别信息。
+- L4 机密信息：密钥、令牌、密码、API key。
+
+## 发布后：TRACE 五维自测
+
+Trust（可信）/ Reliability（可靠）/ Adaptability（适配）/ Convention（规范）/ Effectiveness（有效）。不达标打回。
+
+## 配套工件
+
+- `manifest.json`：包指纹与逐文件 sha256。
+- `ATTESTATION.md`：权属证明与许可声明。
+- `scripts/check_release.py`：发布物自检脚本。
+- `security-radar.svg` / `security_results.json`：最近一次自测雷达与结果。
+
+## 快速开始
+
+```bash
+git clone --depth 1 https://github.com/SynomosAI/publish-quality-gate.git
+cd publish-quality-gate
+python scripts/check_release.py path/to/your/release
+```
+
+## 触发词
+
+准备发布 / 发布前检查 / 发布后自测 / TRACE 评测 / 检查发布物 / 脱敏检查 / 发布质量 / publish quality gate / sensitive scan。
+
+## 许可与权利
+
+MIT 许可。`ATTESTATION.md` 权属：© 2026 注册老炮 (MedXpert)。完整条款见 `LICENSE.md`。
+
+## 边界
+
+本门禁检查「发布物里有没有不该外发的信息」，不替代真实安全审计；TRACE 打分为 AI 自测，结论供参考。
+
+## 链接
+
+- 仓库: https://github.com/SynomosAI/publish-quality-gate
